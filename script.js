@@ -60,8 +60,8 @@ var zucchine = [
     },
 ]
 
-for (var peso in zucchine) {
-    console.log(key + ":" + zucchine[peso])
+for (var key in zucchine) {
+    console.log(key + ":" + zucchine[key])
 }
 
 
