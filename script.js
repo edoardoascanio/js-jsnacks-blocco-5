@@ -1,68 +1,96 @@
 var zucchine = [
     {
-        varieta:"golden",
+        varieta: "golden",
         peso: 4,
-        lunghezza: 11,
+        lunghezza: 15,
     },
 
     {
-        varieta:"fiorentine",
+        varieta: "fiorentine",
         peso: 3,
         lunghezza: 10,
     },
 
     {
-        varieta:"romanesche",
+        varieta: "romanesche",
         peso: 2,
         lunghezza: 8,
     },
 
     {
-        varieta:"golden",
+        varieta: "golden",
         peso: 5,
-        lunghezza: 13,
+        lunghezza: 18,
     },
-    
+
     {
-        varieta:"tonde",
+        varieta: "tonde",
         peso: 6,
         lunghezza: 8,
     },
 
     {
-        varieta:"romanesche",
+        varieta: "romanesche",
         peso: 4,
-        lunghezza: 10,
+        lunghezza: 16,
     },
 
     {
-        varieta:"fiorentine",
+        varieta: "fiorentine",
         peso: 5,
-        lunghezza: 12,
+        lunghezza: 18,
     },
 
     {
-        varieta:"nere",
+        varieta: "nere",
         peso: 3,
         lunghezza: 9,
     },
 
     {
-        varieta:"tonde",
+        varieta: "tonde",
         peso: 5,
         lunghezza: 8,
     },
-    
+
     {
-        varieta:"nere",
+        varieta: "nere",
         peso: 2,
         lunghezza: 8,
-    },
+    }
 ]
 
-for (var key in zucchine) {
-    console.log(key + ":" + zucchine[key])
+
+var somma = 0;
+
+for (var i = 0; i < zucchine.length; i++) {
+    somma += zucchine[i].peso;
+
 }
 
+console.log("Tutte le zucchine(" + zucchine.length + ")pesano " + somma);
 
-var sommaPeso 
+
+var zucchineGrandi = [];
+
+var zucchinePiccole = [];
+
+for (var i = 0; i < zucchine.length; i++) {
+    var zucchina = zucchine[i];
+
+    if (zucchina.lunghezza >= 15) {
+        zucchineGrandi.push(zucchina);
+        sommaZucchineGrandi += zucchina.peso;
+    } else {
+        zucchinePiccole.push(zucchina)
+        sommaZucchinePiccole += zucchine.peso;
+    }
+
+}
+
+console.log("Zucchine grandi: " + zucchineGrandi.length)
+console.log("Le zucchine grandi pesano: " + sommaZucchineGrandi);
+
+console.log("Zucchine piccole: " + zucchinePiccole.length)
+console.log("Le zucchine piccole pesano: " + sommaZucchinePiccole);
+
